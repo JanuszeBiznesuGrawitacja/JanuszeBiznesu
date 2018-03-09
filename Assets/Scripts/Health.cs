@@ -16,7 +16,7 @@ public class Health : MonoBehaviour {
 		}
 		set
 		{
-			_currentHealth = value;
+			_currentHealth = Mathf.Clamp(value, 0, startHealthAmount);
 			if (_currentHealth < 0)
 			{
 				Die();
