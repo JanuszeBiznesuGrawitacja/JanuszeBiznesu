@@ -7,7 +7,7 @@ public class EnemyManager : MonoBehaviour {
     Rigidbody2D rb2d;
     public float speed;
     public float maxDistance, minDistance;
-    bool catchPlayer = false;
+    [SerializeField] bool catchPlayer = false;
 
     void Awake()
     {
@@ -16,10 +16,10 @@ public class EnemyManager : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        catchPlayer = false;
         var health = collision.collider.GetComponentInParent<Health>();
         if (health != null)
         {
-            Debug.Log("Enter");
             health.LoseHealth(100);
         }
     }
@@ -42,7 +42,7 @@ public class EnemyManager : MonoBehaviour {
         }
     }
 
-    void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
@@ -54,12 +54,5 @@ public class EnemyManager : MonoBehaviour {
 
     }
 
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            catchPlayer = false;
-        }
-    }
 
 }
