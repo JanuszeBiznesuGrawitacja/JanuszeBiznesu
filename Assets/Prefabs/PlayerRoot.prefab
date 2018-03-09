@@ -81,6 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4022810443106908}
   - component: {fileID: 114796381449962006}
+  - component: {fileID: 114713205320583418}
   m_Layer: 0
   m_Name: PlayerRoot
   m_TagString: Untagged
@@ -457,6 +458,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114713205320583418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611705077048500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0b7ecbfb97a10438bad180c482405c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  startHealthAmount: 30
 --- !u!114 &114796381449962006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -465,7 +479,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611705077048500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3490ddbdbc4687641b65caf645cd2a58, type: 3}
+  m_Script: {fileID: 11500000, guid: 766854be6e783be489d91da78eaef1ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 1589222706231482}
@@ -490,6 +504,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -505,6 +520,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -532,6 +548,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -547,6 +564,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
