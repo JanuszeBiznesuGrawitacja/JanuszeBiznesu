@@ -122,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4022810443106908, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.4
+      value: 8.84
       objectReference: {fileID: 0}
     - target: {fileID: 4022810443106908, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.87073946
+      value: 6.82
       objectReference: {fileID: 0}
     - target: {fileID: 4022810443106908, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -156,7 +156,12 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -0.02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1611705077048500, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114713205320583418, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &483775130
@@ -489,7 +494,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4467092918529914, guid: b395d36196224334e8295d699054683a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.16
+      value: -7.08
       objectReference: {fileID: 0}
     - target: {fileID: 4467092918529914, guid: b395d36196224334e8295d699054683a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -519,14 +524,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114731194319102918, guid: b395d36196224334e8295d699054683a,
-        type: 2}
-      propertyPath: minDistance
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4467092918529914, guid: b395d36196224334e8295d699054683a, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 61629585082854036, guid: b395d36196224334e8295d699054683a,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 1.5650661
+      objectReference: {fileID: 0}
+    - target: {fileID: 61629585082854036, guid: b395d36196224334e8295d699054683a,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.444642
+      objectReference: {fileID: 0}
+    - target: {fileID: 114731194319102918, guid: b395d36196224334e8295d699054683a,
+        type: 2}
+      propertyPath: maxDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b395d36196224334e8295d699054683a, type: 2}
