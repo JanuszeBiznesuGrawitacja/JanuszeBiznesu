@@ -31,14 +31,6 @@ namespace UnityStandardAssets._2D
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-        void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.Q))
-            {
-                gravity = !gravity;
-            }
-            ChangeGravity(gravity);
-        }
 
         private void FixedUpdate()
         {
@@ -121,17 +113,5 @@ namespace UnityStandardAssets._2D
             transform.localScale = theScale;
         }
 
-        void ChangeGravity(bool gravity)
-        {
-            if(gravity)
-            {
-                Physics2D.gravity = new Vector2(0, 0);
-            }
-            else
-            {
-                Physics2D.gravity = new Vector2(0, -9.81f);
-            }
-
-        }
     }
 }
