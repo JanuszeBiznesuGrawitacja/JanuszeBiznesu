@@ -26,15 +26,15 @@ public class EnemyManager : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if(!catchPlayer)
+        if (!catchPlayer)
         {
             rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
-            if(transform.position.x > maxDistance)
+            if (transform.position.x > maxDistance)
             {
                 speed = -5;
                 transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
             }
-            if(transform.position.x<minDistance)
+            if (transform.position.x < minDistance)
             {
                 speed = 5;
                 transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
@@ -44,10 +44,10 @@ public class EnemyManager : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
             catchPlayer = true;
-            float direction = Mathf.Sign(collision.transform.position.x- transform.position.x);
+            float direction = Mathf.Sign(collision.transform.position.x - transform.position.x);
             speed *= direction;
             rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
         }
