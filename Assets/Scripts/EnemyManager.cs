@@ -8,6 +8,7 @@ public class EnemyManager : MonoBehaviour {
     public float speed;
     public float maxDistance, minDistance;
     [SerializeField] bool catchPlayer = false;
+    float direction;
 
     void Awake()
     {
@@ -40,6 +41,11 @@ public class EnemyManager : MonoBehaviour {
                 transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
             }
         }
+        else
+        {
+            speed *= direction;
+            rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -47,9 +53,7 @@ public class EnemyManager : MonoBehaviour {
         if (collision.tag == "Player")
         {
             catchPlayer = true;
-            float direction = Mathf.Sign(collision.transform.position.x - transform.position.x);
-            speed *= direction;
-            rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
+            direction = Mathf.Sign(collision.transform.position.x - transform.position.x);
         }
 
     }
