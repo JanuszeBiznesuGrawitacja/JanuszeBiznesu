@@ -17,13 +17,10 @@ public class Health : MonoBehaviour {
 		set
 		{
 			_currentHealth = Mathf.Clamp(value, 0, startHealthAmount);
+			RefreshHealthBarUI();
 			if (_currentHealth <= 0)
 			{
 				Die();
-			}
-			else
-			{
-				RefreshHealthBarUI();
 			}
 		}
 	}
