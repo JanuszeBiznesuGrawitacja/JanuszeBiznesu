@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12536e16c3b45d42a834d73b1f6ce0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: level2
 --- !u!114 &114268914673648546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -440,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5621f871becd4f4ea4b3958f34a2e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enteredExit: 0
 --- !u!114 &114307733492576050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5621f871becd4f4ea4b3958f34a2e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enteredExit: 0
 --- !u!114 &114410671053746720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -526,6 +529,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -541,6 +545,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -568,6 +573,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -583,6 +589,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

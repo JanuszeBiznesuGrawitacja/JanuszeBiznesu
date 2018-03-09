@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityStandardAssets._2D;
 
 public class PlayerController : MonoBehaviour {
 	private Platformer2DUserControl userControl;
 	private PlatformerCharacter2D platformerCharacter2D;
 	private Animator animator;
+	public bool enteredExit;
 
 	private void Awake() {
 		userControl = GetComponent<Platformer2DUserControl>();
