@@ -49,6 +49,7 @@ public class Health : MonoBehaviour {
 	}
 
 	public void Die() {
+		GameOverPanel.instance.ShowGameOverScreen();
 		Destroy(gameObject);
 	}
 }
