@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets._2D;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Gravity : MonoBehaviour {
@@ -11,6 +12,7 @@ public class Gravity : MonoBehaviour {
     public float gravityScalemax;
     bool gravity=false;
     Rigidbody2D rb2d;
+    public GameObject booble;
 
     void Awake()
     {
@@ -26,7 +28,12 @@ public class Gravity : MonoBehaviour {
 
     void ChangeGravity(bool gravity)
     {
-        rb2d.gravityScale = gravity ? gravityScalemax : gravityScalemin;
+        if(gameObject.GetComponent<PlatformerCharacter2D>().enabled == true)
+        {
+            rb2d.gravityScale = gravity ? gravityScalemax : gravityScalemin;
+            booble.SetActive(gravity);
+        }
+
     }
 
 }
