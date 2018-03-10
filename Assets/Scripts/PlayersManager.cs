@@ -42,10 +42,10 @@ public class PlayersManager : MonoBehaviour {
         player.GetComponent<Gravity>().CheckGravity();
 		activePlayerIndex = (activePlayerIndex + 1) % players.Length;
 		GetCurrentPlayer().SetAsActivePlayer(true);
-        DOTween.Sequence().Append(sr[activePlayerIndex].DOColor(Color.clear, 0.5f))
-            .Append(sr[activePlayerIndex].DOColor(Color.white, 0.5f))
-            .Append(sr[activePlayerIndex].DOColor(Color.clear, 0.5f))
-            .Append(sr[activePlayerIndex].DOColor(Color.white, 0.5f));
+        DOTween.Sequence().Append(sr[activePlayerIndex].DOColor(Color.clear, 0.2f))
+            .Append(sr[activePlayerIndex].DOColor(Color.white, 0.2f))
+            .Append(sr[activePlayerIndex].DOColor(Color.clear, 0.2f))
+            .Append(sr[activePlayerIndex].DOColor(Color.white, 0.2f));
         _camera2DFollow.target = GetCurrentPlayer().transform;
 	}
 
