@@ -36,4 +36,9 @@ public class Gravity : MonoBehaviour {
 			booble.SetActive(gravity);
 		}
 	}
+
+    public void CheckGravity()
+    {
+        if (gravity) ChangeGravity(false);
+    }
 }
