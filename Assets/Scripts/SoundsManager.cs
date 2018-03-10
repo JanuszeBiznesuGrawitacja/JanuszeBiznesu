@@ -126,9 +126,14 @@ public class SoundsManager : MonoBehaviour {
 			int next = (currentPlayingMusicSource + 1) % musicSources.Length;
 			musicSources[currentPlayingMusicSource].DOFade(0, 0.5f);
 			musicSources[next].clip = track;
+<<<<<<< HEAD
 			musicSources[next].loop = track != lector && track != winSound;
 			var volume = track == lector ? 1 : 0.25f;
 			//musicSources[next].volume = 1;
+=======
+			musicSources[next].loop = track != lector;
+			var volume = track == lector ? 1 : 0.35f;
+>>>>>>> ab31af2e6aa34a6b4eb50df6fdd22d192e99ae8f
 			musicSources[next].Play();
 			musicSources[next].DOFade(volume, 0.5f);
 			currentPlayingMusicSource = next;
@@ -138,5 +143,9 @@ public class SoundsManager : MonoBehaviour {
 	public void FadeOutMusic(float time) {
 		musicSources[currentPlayingMusicSource].DOFade(0, time);
 		currentClip = null;
+	}
+
+	public void TurnTheMusicUp() {
+		musicSources[currentPlayingMusicSource].DOFade(1, 1f);
 	}
 }

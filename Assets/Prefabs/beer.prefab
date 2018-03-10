@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a43b77b4b69396b49a388465c8e39e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthRefillAmount: 10
+  healthRefillAmount: 15
 --- !u!212 &212618392280140048
 SpriteRenderer:
   m_ObjectHideFlags: 1

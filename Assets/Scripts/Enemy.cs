@@ -11,10 +11,12 @@ public class Enemy : MonoBehaviour {
     public int speed;
     [SerializeField] bool seePlayer = false;
     public float relativeVelocityToKill;
+    Animator anim;
 
     void Awake()
     {
-        rb2d = GetComponent<Rigidbody2D>();   
+        rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Start()
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour {
         {
             Debug.Log("Found Player");
             seePlayer = true;
+            anim.SetBool("IsRunning", true);
         }
     }
 
@@ -44,6 +47,7 @@ public class Enemy : MonoBehaviour {
         {
             Debug.Log("I can't see player");
             seePlayer = false;
+            anim.SetBool("IsRunning", false);
         }
     }
 
