@@ -367,5 +367,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a680be7d709c6d54fb0045324bcfea69, type: 3}
   - {fileID: 8300000, guid: a25c7d5c972f7e84888a752be0cc32fb, type: 3}
   - {fileID: 8300000, guid: 9ac3fa6f9933fac4ab9a17a230251901, type: 3}
+  brokenPlank:
+  - {fileID: 8300000, guid: 83d665adb349f3b429c18e975aa77132, type: 3}
+  - {fileID: 8300000, guid: 9523c9d49a4684b49b052adf37dceda0, type: 3}
   intro: {fileID: 8300000, guid: b59818ef8c3cc1540bc6bc8f0751b0de, type: 3}
   main: {fileID: 8300000, guid: c6151a5e1ecc9f24cb91eeb80197750c, type: 3}
