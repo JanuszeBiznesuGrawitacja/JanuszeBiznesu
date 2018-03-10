@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 222714487149305580}
   - component: {fileID: 114659010698660420}
   - component: {fileID: 114551175759623024}
-  - component: {fileID: 114431925492287252}
+  - component: {fileID: 114914990706792484}
   m_Layer: 5
   m_Name: RestartLevel
   m_TagString: Untagged
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 222117623575037902}
   - component: {fileID: 114858350231799360}
   - component: {fileID: 114216451205793986}
-  - component: {fileID: 114880126538281852}
+  - component: {fileID: 114197560877522422}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -206,6 +206,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114197560877522422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943265615045102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95efc9f5201c9a64e9f653281027a7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114216451205793986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -339,17 +350,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114431925492287252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1301770667278906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95efc9f5201c9a64e9f653281027a7bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114460044681127840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -585,12 +585,12 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114880126538281852
+--- !u!114 &114914990706792484
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1943265615045102}
+  m_GameObject: {fileID: 1301770667278906}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95efc9f5201c9a64e9f653281027a7bb, type: 3}

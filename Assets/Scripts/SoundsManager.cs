@@ -126,7 +126,7 @@ public class SoundsManager : MonoBehaviour {
 			int next = (currentPlayingMusicSource + 1) % musicSources.Length;
 			musicSources[currentPlayingMusicSource].DOFade(0, 0.5f);
 			musicSources[next].clip = track;
-			musicSources[next].loop = track != lector;
+			musicSources[next].loop = track != lector && track != winSound;
 			var volume = track == lector ? 1 : 0.25f;
 			//musicSources[next].volume = 1;
 			musicSources[next].Play();
