@@ -138,4 +138,8 @@ public class SoundsManager : MonoBehaviour {
 		musicSources[currentPlayingMusicSource].DOFade(0, time);
 		currentClip = null;
 	}
+
+	public void TurnTheMusicUp() {
+		musicSources[currentPlayingMusicSource].DOFade(1, 1f);
+	}
 }
