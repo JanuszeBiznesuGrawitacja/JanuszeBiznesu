@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 	private void Awake() {
 		userControl = GetComponent<Platformer2DUserControl>();
 		platformerCharacter2D = GetComponent<PlatformerCharacter2D>();
+		platformerCharacter2D.OnCharacterJump += Jump;
 		animator = GetComponent<Animator>();
 		SetAsActivePlayer(false);
 	}
@@ -24,10 +25,7 @@ public class PlayerController : MonoBehaviour {
 		isActive = state;
 	}
 
-	public void Update() {
-		if (isActive && Input.GetKeyDown(KeyCode.Space))
-		{
-			SoundsManager.instance.PlaySound(jumpSounds);
-		}
+	public void Jump() {
+		SoundsManager.instance.PlaySound(jumpSounds);
 	}
 }
