@@ -1381,6 +1381,48 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 234530444}
+    - target: {fileID: 212828740397234798, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300010, guid: 05aa923073a44d748b00bb60743129c9,
+        type: 3}
+    - target: {fileID: 212828740397234798, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 212828740397234798, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 212828740397234798, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212234746266968720, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300010, guid: ad72c19682a9e2245b27efcbb76ea68f,
+        type: 3}
+    - target: {fileID: 212234746266968720, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 212234746266968720, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 212234746266968720, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
   m_IsPrefabParent: 0
