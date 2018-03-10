@@ -2,9 +2,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets._2D;
+using DG.Tweening;
 
 public class PlayersManager : MonoBehaviour {
 	public string sceneToLoad;
+
+    SpriteRenderer[] sr;
 
 	private PlayerController[] players;
 	private int activePlayerIndex;
@@ -14,6 +17,7 @@ public class PlayersManager : MonoBehaviour {
 	private void Awake() {
 		_camera2DFollow = FindObjectOfType<Camera2DFollow>();
 		players = GetComponentsInChildren<PlayerController>();
+        sr = GetComponentsInChildren<SpriteRenderer>();
 	}
 
 	private void Start() {
@@ -36,7 +40,11 @@ public class PlayersManager : MonoBehaviour {
 		GetCurrentPlayer().SetAsActivePlayer(false);
 		activePlayerIndex = (activePlayerIndex + 1) % players.Length;
 		GetCurrentPlayer().SetAsActivePlayer(true);
-		_camera2DFollow.target = GetCurrentPlayer().transform;
+        DOTween.Sequence().Append(sr[activePlayerIndex].DOColor(Color.clear, 0.5f))
+            .Append(sr[activePlayerIndex].DOColor(Color.white, 0.5f))
+            .Append(sr[activePlayerIndex].DOColor(Color.clear, 0.5f))
+            .Append(sr[activePlayerIndex].DOColor(Color.white, 0.5f));
+        _camera2DFollow.target = GetCurrentPlayer().transform;
 	}
 
 	private PlayerController GetCurrentPlayer() {
