@@ -35,10 +35,7 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.relativeVelocity.magnitude >= relativeVelocityToKill && collision.collider.tag == "Player")
-		{
-			transform.DOScaleY(0, 0.5f).OnComplete(() => Destroy(gameObject));
-		}
+		
 		else
 		{
 			var health = collision.collider.GetComponentInParent<Health>();
