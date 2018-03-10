@@ -17,11 +17,11 @@ public class EnemyManager : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        catchPlayer = false;
         var health = collision.collider.GetComponentInParent<Health>();
         if (health != null)
         {
             health.LoseHealth(100);
+            catchPlayer = false;
         }
     }
 
@@ -55,7 +55,6 @@ public class EnemyManager : MonoBehaviour {
             catchPlayer = true;
             direction = Mathf.Sign(collision.transform.position.x - transform.position.x);
         }
-
     }
 
 
