@@ -48,7 +48,7 @@ public class Health : MonoBehaviour {
 		LoseHealth(Time.deltaTime);
 	}
 
-	private void Die() {
+	public void Die() {
 		Destroy(gameObject);
 	}
 }

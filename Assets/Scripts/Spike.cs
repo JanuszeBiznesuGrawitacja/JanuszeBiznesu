@@ -9,7 +9,7 @@ public class Spike : MonoBehaviour {
         var health = collision.collider.GetComponentInParent<Health>();
         if (health != null)
         {
-            health.LoseHealth(1000);
+            health.Die();
         }
     }
 }
