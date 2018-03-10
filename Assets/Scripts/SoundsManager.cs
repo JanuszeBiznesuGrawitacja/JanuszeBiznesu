@@ -8,6 +8,7 @@ public class SoundsManager : MonoBehaviour {
 	public AudioSource[] musicSources;
 	public AudioClip pickPowerUp;
 	public AudioClip clickSound;
+	public AudioClip[] activateGravity;
 
 	//Music Tracks
 	public AudioClip intro;
@@ -32,6 +33,15 @@ public class SoundsManager : MonoBehaviour {
 
 	public void PlayPickPowerUpSound() {
 		PlaySound(pickPowerUp);
+	}
+
+	public void PlayActivateGravitySound(bool state) {
+		audioSource.Stop();
+		if (state)
+		{
+			audioSource.clip = activateGravity[Random.Range(0, activateGravity.Length)];
+			audioSource.Play();
+		}
 	}
 
 	public void Stop() {

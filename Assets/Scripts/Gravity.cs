@@ -6,34 +6,34 @@ using UnityStandardAssets._2D;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Gravity : MonoBehaviour {
 
-    [Range(0,10)]
-    public float gravityScalemin;
-    [Range(0, 10)]
-    public float gravityScalemax;
-    bool gravity=false;
-    Rigidbody2D rb2d;
-    public GameObject booble;
+	[Range(0, 10)]
+	public float gravityScalemin;
 
-    void Awake()
-    {
-        rb2d = GetComponent<Rigidbody2D>();    
-    }
+	[Range(0, 10)]
+	public float gravityScalemax;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q)) gravity = !gravity;
-        ChangeGravity(gravity);
+	private bool gravity = false;
+	private Rigidbody2D rb2d;
+	public GameObject booble;
 
-    }
+	private void Awake() {
+		rb2d = GetComponent<Rigidbody2D>();
+	}
 
-    void ChangeGravity(bool gravity)
-    {
-        if(gameObject.GetComponent<PlatformerCharacter2D>().enabled == true)
-        {
-            rb2d.gravityScale = gravity ? gravityScalemax : gravityScalemin;
-            booble.SetActive(gravity);
-        }
+	private void Update() {
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			gravity = !gravity;
+			ChangeGravity(gravity);
+		}
+	}
 
-    }
-
+	private void ChangeGravity(bool gravity) {
+		if (gameObject.GetComponent<PlatformerCharacter2D>().enabled == true)
+		{
+			SoundsManager.instance.PlayActivateGravitySound(gravity);
+			rb2d.gravityScale = gravity ? gravityScalemax : gravityScalemin;
+			booble.SetActive(gravity);
+		}
+	}
 }

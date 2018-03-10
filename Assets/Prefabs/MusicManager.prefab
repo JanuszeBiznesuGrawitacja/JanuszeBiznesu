@@ -357,5 +357,8 @@ MonoBehaviour:
   - {fileID: 82165001638968260}
   pickPowerUp: {fileID: 8300000, guid: 9ad19b49b2c65184581c63c9f6905224, type: 3}
   clickSound: {fileID: 8300000, guid: 3ccb99a5648ca2b4fb535261855ae992, type: 3}
+  activateGravity:
+  - {fileID: 8300000, guid: 5edbb865fe08c9c459729441cdcb96f3, type: 3}
+  - {fileID: 8300000, guid: 8426a74575b1fa749a4cce04eb3cc3ca, type: 3}
   intro: {fileID: 8300000, guid: b59818ef8c3cc1540bc6bc8f0751b0de, type: 3}
   main: {fileID: 8300000, guid: c6151a5e1ecc9f24cb91eeb80197750c, type: 3}
