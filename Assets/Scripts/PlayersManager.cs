@@ -42,9 +42,9 @@ public class PlayersManager : MonoBehaviour {
 	}
 
 	private void ChangePlayer() {
-		GetCurrentPlayer().SetAsActivePlayer(false);
 		var player = GetCurrentPlayer();
 		player.GetComponent<Gravity>().CheckGravity();
+		player.SetAsActivePlayer(false);
 		activePlayerIndex = (activePlayerIndex + 1) % players.Length;
 		GetCurrentPlayer().SetAsActivePlayer(true);
 		DOTween.Sequence().Append(sr[activePlayerIndex].DOColor(Color.clear, 0.2f))

@@ -127,8 +127,7 @@ public class SoundsManager : MonoBehaviour {
 			musicSources[currentPlayingMusicSource].DOFade(0, 0.5f);
 			musicSources[next].clip = track;
 			musicSources[next].loop = track != lector;
-			var volume = track == lector ? 1 : 0.25f;
-			//musicSources[next].volume = 1;
+			var volume = track == lector ? 1 : 0.35f;
 			musicSources[next].Play();
 			musicSources[next].DOFade(volume, 0.5f);
 			currentPlayingMusicSource = next;
