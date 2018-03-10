@@ -1,61 +1,90 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyManager : MonoBehaviour {
-
-    Rigidbody2D rb2d;
+public class EnemyManager : MonoBehaviour
+{
+    private Rigidbody2D rb2d;
     public float speed;
-    public float maxDistance, minDistance;
-    [SerializeField] bool catchPlayer = false;
-    float direction;
+    public float walkingRange;
+    public float sightRange;
+    private float direction = 1;
+    private Vector3 startPosition;
+    private Transform target;
 
-    void Awake()
+    public float Direction
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        get
+        {
+            return direction;
+        }
+
+        set
+        {
+            if (value != direction)
+            {
+                direction = value;
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            }
+        }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void Awake()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+        startPosition = transform.position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         var health = collision.collider.GetComponentInParent<Health>();
         if (health != null)
         {
             health.LoseHealth(100);
-            catchPlayer = false;
+        }
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Direction *= -1;
         }
     }
 
-    void FixedUpdate()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (!catchPlayer)
+        var health = collision.collider.GetComponentInParent<Health>();
+        if (health != null)
         {
-            rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
-            if (transform.position.x > maxDistance)
+            health.LoseHealth(100);
+        }
+    }
+
+    private void Update()
+    {
+        if (!target)
+        {
+            if (transform.position.x > startPosition.x + walkingRange)
             {
-                speed = -5;
-                transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+                Direction = -1;
             }
-            if (transform.position.x < minDistance)
+            else if (transform.position.x < startPosition.x - walkingRange)
             {
-                speed = 5;
-                transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+                Direction = 1;
             }
         }
         else
         {
-            speed *= direction;
-            rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
+            var distance = target.position.x - transform.position.x;
+            Direction = Mathf.Sign(distance);
+            if (Mathf.Abs(distance) > sightRange)
+            {
+                target = null;
+            }
         }
+        rb2d.velocity = new Vector2(speed * Direction, rb2d.velocity.y);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            catchPlayer = true;
-            direction = Mathf.Sign(collision.transform.position.x - transform.position.x);
+            target = collision.transform;
         }
     }
-
-
 }
