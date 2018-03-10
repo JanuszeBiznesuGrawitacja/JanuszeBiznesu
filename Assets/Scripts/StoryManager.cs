@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class StoryManager : MonoBehaviour {
 
+    [SerializeField] GameObject[] Text;
+
 	// Use this for initialization
 	private void Start() {
+        StartCoroutine(textManager());
 	}
 
 	// Update is called once per frame
@@ -17,4 +20,22 @@ public class StoryManager : MonoBehaviour {
 		SoundsManager.instance.SetMainMusicTrack();
 		SceneManager.LoadSceneAsync("LEVEL");
 	}
+
+    IEnumerator textManager()
+    {
+        yield return new WaitForSeconds(3.5f);
+        Text[0].SetActive(true);
+        yield return new WaitForSeconds(12f);
+        Text[0].SetActive(false);
+        Text[1].SetActive(true);
+        yield return new WaitForSeconds(22f);
+        Text[1].SetActive(false);
+        Text[2].SetActive(true);
+        yield return new WaitForSeconds(16.5f);
+        Text[2].SetActive(false);
+        Text[3].SetActive(true);
+        yield return new WaitForSeconds(5f);
+        Text[4].SetActive(true);
+        yield return 0;
+    }
 }
