@@ -8,6 +8,9 @@ public class JumpingPlatfrm : MonoBehaviour {
 
     [SerializeField] GameObject ourPipe;
 
+    public GameObject pieceBoard;
+    public Transform spawnPoint, spawnPoint1;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -22,6 +25,8 @@ public class JumpingPlatfrm : MonoBehaviour {
         if(collision.relativeVelocity.magnitude >= relativeVelocityToBreak)
         {
             print("wdwdwdwd");
+            Instantiate(pieceBoard, spawnPoint.position, Quaternion.identity);
+            Instantiate(pieceBoard, spawnPoint1.position, Quaternion.identity);
             Destroy(ourPipe);
         }
     }
