@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -5
   seePlayer: 0
-  relativeVelocityToKill: 0
+  relativeVelocityToKill: 18
 --- !u!212 &212076789917179406
 SpriteRenderer:
   m_ObjectHideFlags: 1
