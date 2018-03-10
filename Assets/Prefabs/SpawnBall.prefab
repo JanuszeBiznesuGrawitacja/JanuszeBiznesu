@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 4483169094470978}
   - component: {fileID: 114610661727687504}
   m_Layer: 0
-  m_Name: SpawBall
+  m_Name: SpawnBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
