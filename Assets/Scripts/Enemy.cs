@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Enemy : MonoBehaviour {
@@ -9,6 +10,7 @@ public class Enemy : MonoBehaviour {
     Vector3 startPosition;
     public int speed;
     [SerializeField] bool seePlayer = false;
+    public float relativeVelocityToKill;
 
     void Awake()
     {
@@ -47,11 +49,19 @@ public class Enemy : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var health = collision.collider.GetComponentInParent<Health>();
-			if (health != null)
-			{
-				health.LoseHealth(80, true);
-			}
+        if (collision.relativeVelocity.magnitude >= relativeVelocityToKill && collision.collider.tag == "Player")
+        {
+            transform.DOScaleY(0, 0.5f).OnComplete(() => Destroy(gameObject));
+        }
+        else
+        {
+            var health = collision.collider.GetComponentInParent<Health>();
+            if (health != null)
+            {
+                health.LoseHealth(80, true);
+            }
+        }
+       
     }
 
 }
