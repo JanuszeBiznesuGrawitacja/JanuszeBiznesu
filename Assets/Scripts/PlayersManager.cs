@@ -7,7 +7,7 @@ using DG.Tweening;
 public class PlayersManager : MonoBehaviour {
 	public string sceneToLoad;
 
-    SpriteRenderer[] sr;
+	private SpriteRenderer[] sr;
 
 	private PlayerController[] players;
 	private int activePlayerIndex;
@@ -17,10 +17,11 @@ public class PlayersManager : MonoBehaviour {
 	private void Awake() {
 		_camera2DFollow = FindObjectOfType<Camera2DFollow>();
 		players = GetComponentsInChildren<PlayerController>();
-        sr = GetComponentsInChildren<SpriteRenderer>();
+		sr = GetComponentsInChildren<SpriteRenderer>();
 	}
 
 	private void Start() {
+		SoundsManager.instance.LecimyNaMarsa();
 		players[0].SetAsActivePlayer(true);
 		_camera2DFollow.target = GetCurrentPlayer().transform;
 	}
@@ -38,15 +39,15 @@ public class PlayersManager : MonoBehaviour {
 
 	private void ChangePlayer() {
 		GetCurrentPlayer().SetAsActivePlayer(false);
-        var player = GetCurrentPlayer();
-        player.GetComponent<Gravity>().CheckGravity();
+		var player = GetCurrentPlayer();
+		player.GetComponent<Gravity>().CheckGravity();
 		activePlayerIndex = (activePlayerIndex + 1) % players.Length;
 		GetCurrentPlayer().SetAsActivePlayer(true);
-        DOTween.Sequence().Append(sr[activePlayerIndex].DOColor(Color.clear, 0.2f))
-            .Append(sr[activePlayerIndex].DOColor(Color.white, 0.2f))
-            .Append(sr[activePlayerIndex].DOColor(Color.clear, 0.2f))
-            .Append(sr[activePlayerIndex].DOColor(Color.white, 0.2f));
-        _camera2DFollow.target = GetCurrentPlayer().transform;
+		DOTween.Sequence().Append(sr[activePlayerIndex].DOColor(Color.clear, 0.2f))
+			.Append(sr[activePlayerIndex].DOColor(Color.white, 0.2f))
+			.Append(sr[activePlayerIndex].DOColor(Color.clear, 0.2f))
+			.Append(sr[activePlayerIndex].DOColor(Color.white, 0.2f));
+		_camera2DFollow.target = GetCurrentPlayer().transform;
 	}
 
 	private PlayerController GetCurrentPlayer() {

@@ -13,11 +13,13 @@ public class SoundsManager : MonoBehaviour {
 	public AudioClip[] brokenPlank;
 	public AudioClip[] kickChestSounds;
 	public AudioClip[] dieSounds;
-	public AudioClip[] winSounds;
+	public AudioClip lecimyNaMarsa;
+	public AudioClip passatemNaZiemie;
 
 	//Music Tracks
 	public AudioClip intro;
 
+	public AudioClip winSound;
 	public AudioClip lector;
 	public AudioClip main;
 
@@ -66,8 +68,16 @@ public class SoundsManager : MonoBehaviour {
 		PlaySound(dieSounds);
 	}
 
-	public void PlayWonSounds() {
-		PlaySound(winSounds);
+	public void PlayWinSound() {
+		SwitchMusicTrack(winSound);
+	}
+
+	public void LecimyNaMarsa() {
+		PlaySound(lecimyNaMarsa);
+	}
+
+	public void PassatemNaZiemie() {
+		PlaySound(passatemNaZiemie);
 	}
 
 	public void Stop() {
@@ -117,9 +127,10 @@ public class SoundsManager : MonoBehaviour {
 			musicSources[currentPlayingMusicSource].DOFade(0, 0.5f);
 			musicSources[next].clip = track;
 			musicSources[next].loop = track != lector;
-			musicSources[next].volume = track == lector ? 1 : 0.25f;
+			var volume = track == lector ? 1 : 0.25f;
+			//musicSources[next].volume = 1;
 			musicSources[next].Play();
-			musicSources[next].DOFade(1, 0.5f);
+			musicSources[next].DOFade(volume, 0.5f);
 			currentPlayingMusicSource = next;
 		}
 	}

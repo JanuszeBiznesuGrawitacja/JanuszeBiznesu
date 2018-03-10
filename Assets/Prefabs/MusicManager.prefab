@@ -381,9 +381,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 84596f564db00c14aa78cf4e8b3109fc, type: 3}
   - {fileID: 8300000, guid: 5112583ccfa2c08429712fc4d569c6a0, type: 3}
   - {fileID: 8300000, guid: 8d07920641fae544898766617116c4dd, type: 3}
-  winSounds:
-  - {fileID: 8300000, guid: aac950b6d1c39b144afd41de9958a22a, type: 3}
-  - {fileID: 8300000, guid: 14e0cf6509c9ffa41ad961e315576460, type: 3}
+  lecimyNaMarsa: {fileID: 8300000, guid: 6f31704da1f98c846a09cc12ac7d8b7f, type: 3}
+  passatemNaZiemie: {fileID: 8300000, guid: 68bcc0203826f494297e97f43a864e93, type: 3}
   intro: {fileID: 8300000, guid: b59818ef8c3cc1540bc6bc8f0751b0de, type: 3}
+  winSound: {fileID: 8300000, guid: 14e0cf6509c9ffa41ad961e315576460, type: 3}
   lector: {fileID: 8300000, guid: 0f6f8af4f81b54944ab1757b75d5babb, type: 3}
   main: {fileID: 8300000, guid: c6151a5e1ecc9f24cb91eeb80197750c, type: 3}

@@ -51,6 +51,7 @@ public class Health : MonoBehaviour {
 	}
 
 	public void Die() {
+		SoundsManager.instance.PlayDieSound();
 		GameOverPanel.instance.ShowGameOverScreen();
 		Destroy(gameObject);
 	}
