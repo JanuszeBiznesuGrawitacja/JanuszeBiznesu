@@ -13,6 +13,11 @@ public class Cloud : MonoBehaviour {
         rb2d.gravityScale = 0;
     }
 
+    void Start()
+    {
+        Destroy(gameObject, 25);
+    }
+
     void FixedUpdate()
     {
         rb2d.velocity = new Vector2(Random.Range(0.5f, 2.5f), rb2d.velocity.y);
