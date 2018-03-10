@@ -1,33 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class JumpingPlatfrm : MonoBehaviour {
+	[SerializeField] private float relativeVelocityToBreak = 1f;
 
-    [SerializeField] float relativeVelocityToBreak = 1f;
+	[SerializeField] private GameObject ourPipe;
 
-    [SerializeField] GameObject ourPipe;
+	public GameObject pieceBoard;
+	public Transform spawnPoint, spawnPoint1;
 
-    public GameObject pieceBoard;
-    public Transform spawnPoint, spawnPoint1;
-
-	// Use this for initialization
-	void Start () {
+	private void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.relativeVelocity.magnitude >= relativeVelocityToBreak)
+		{
+			Instantiate(pieceBoard, spawnPoint.position, Quaternion.identity);
+			Instantiate(pieceBoard, spawnPoint1.position, Quaternion.identity);
+			SoundsManager.instance.PlayBrokenPlankSound();
+			Destroy(ourPipe);
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.relativeVelocity.magnitude >= relativeVelocityToBreak)
-        {
-            print("wdwdwdwd");
-            Instantiate(pieceBoard, spawnPoint.position, Quaternion.identity);
-            Instantiate(pieceBoard, spawnPoint1.position, Quaternion.identity);
-            Destroy(ourPipe);
-        }
-    }
 }

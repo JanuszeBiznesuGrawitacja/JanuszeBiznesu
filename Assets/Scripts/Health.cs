@@ -36,7 +36,9 @@ public class Health : MonoBehaviour {
 		healthBar.value = startHealthAmount;
 	}
 
-	public void LoseHealth(float amount) {
+	public void LoseHealth(float amount, bool playSound) {
+		if (playSound)
+			SoundsManager.instance.PlayTakeDamageSound();
 		CurrentHealth -= amount;
 	}
 
@@ -45,7 +47,7 @@ public class Health : MonoBehaviour {
 	}
 
 	private void Update() {
-		LoseHealth(Time.deltaTime);
+		LoseHealth(Time.deltaTime, false);
 	}
 
 	public void Die() {

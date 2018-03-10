@@ -31,7 +31,7 @@ public class Gravity : MonoBehaviour {
 	private void ChangeGravity(bool gravity) {
 		if (gameObject.GetComponent<PlatformerCharacter2D>().enabled == true)
 		{
-			SoundsManager.instance.PlayActivateGravitySound(gravity);
+			//SoundsManager.instance.PlayActivateGravitySound(gravity);
 			rb2d.gravityScale = gravity ? gravityScalemax : gravityScalemin;
 			booble.SetActive(gravity);
 		}

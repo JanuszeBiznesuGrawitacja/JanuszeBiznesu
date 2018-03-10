@@ -360,5 +360,15 @@ MonoBehaviour:
   activateGravity:
   - {fileID: 8300000, guid: 5edbb865fe08c9c459729441cdcb96f3, type: 3}
   - {fileID: 8300000, guid: 8426a74575b1fa749a4cce04eb3cc3ca, type: 3}
+  takeDamageSounds:
+  - {fileID: 8300000, guid: 4c26f0e75694dd143b8004a0fc5b1d90, type: 3}
+  - {fileID: 8300000, guid: 42ce9b579568137438611237aac5b49b, type: 3}
+  - {fileID: 8300000, guid: a189b062d5e2394478e260266bbbc4c3, type: 3}
+  - {fileID: 8300000, guid: a680be7d709c6d54fb0045324bcfea69, type: 3}
+  - {fileID: 8300000, guid: a25c7d5c972f7e84888a752be0cc32fb, type: 3}
+  - {fileID: 8300000, guid: 9ac3fa6f9933fac4ab9a17a230251901, type: 3}
+  brokenPlank:
+  - {fileID: 8300000, guid: 83d665adb349f3b429c18e975aa77132, type: 3}
+  - {fileID: 8300000, guid: 9523c9d49a4684b49b052adf37dceda0, type: 3}
   intro: {fileID: 8300000, guid: b59818ef8c3cc1540bc6bc8f0751b0de, type: 3}
   main: {fileID: 8300000, guid: c6151a5e1ecc9f24cb91eeb80197750c, type: 3}

@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour {
 		var health = collision.gameObject.GetComponentInParent<Health>();
 		if (health)
 		{
-			health.LoseHealth(damage);
+			health.LoseHealth(damage, true);
 			Destroy(gameObject);
 		}
 		else if (collision.gameObject.tag == "Floor")
