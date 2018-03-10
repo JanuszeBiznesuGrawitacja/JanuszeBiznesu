@@ -10,6 +10,7 @@ public class SoundsManager : MonoBehaviour {
 	public AudioClip clickSound;
 	public AudioClip[] activateGravity;
 	public AudioClip[] takeDamageSounds;
+	public AudioClip[] brokenPlank;
 
 	//Music Tracks
 	public AudioClip intro;
@@ -47,6 +48,10 @@ public class SoundsManager : MonoBehaviour {
 
 	public void PlayTakeDamageSound() {
 		PlaySound(takeDamageSounds);
+	}
+
+	public void PlayBrokenPlankSound() {
+		PlaySound(brokenPlank);
 	}
 
 	public void Stop() {
