@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     private float direction = 1;
     private Vector3 startPosition;
     private Transform target;
+    public float relativeVelocityToKill;
 
     public float Direction
     {
@@ -35,15 +36,25 @@ public class EnemyManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var health = collision.collider.GetComponentInParent<Health>();
-        if (health != null)
+
+        if (collision.relativeVelocity.magnitude >= relativeVelocityToKill)
         {
-            health.LoseHealth(100);
+            Destroy(gameObject);
         }
-        else if (collision.gameObject.CompareTag("Obstacle"))
+        else
         {
-            Direction *= -1;
+            var health = collision.collider.GetComponentInParent<Health>();
+            if (health != null)
+            {
+                health.LoseHealth(100);
+            }
+            else if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                Direction *= -1;
+            }
         }
+
+           
     }
 
     private void OnCollisionStay2D(Collision2D collision)
