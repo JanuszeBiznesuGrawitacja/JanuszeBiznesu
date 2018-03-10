@@ -21,5 +21,14 @@ public class Button : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         pipe.Slide = true;
+        StartCoroutine(stopMoving());
     }
+
+    IEnumerator stopMoving()
+    {
+        yield return new WaitForSeconds(0.3f);
+        GetComponent<Rigidbody2D>().simulated = false;
+
+    }
+
 }
