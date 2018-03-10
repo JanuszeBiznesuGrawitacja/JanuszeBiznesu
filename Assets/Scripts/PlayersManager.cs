@@ -31,6 +31,10 @@ public class PlayersManager : MonoBehaviour {
 		{
 			ChangePlayer();
 		}
+		else if (Input.GetKeyDown(KeyCode.R))
+		{
+			SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+		}
 		if (AllPlayersStaysAtExitPortal())
 		{
 			LoadNextLevel();
