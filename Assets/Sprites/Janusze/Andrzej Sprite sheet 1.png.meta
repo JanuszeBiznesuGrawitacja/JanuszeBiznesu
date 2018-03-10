@@ -1,14 +1,15 @@
 fileFormatVersion: 2
-guid: 727da4c394d32224b8f0309b2d9affa3
-timeCreated: 1520650502
+guid: 05aa923073a44d748b00bb60743129c9
+timeCreated: 1520664682
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Andrzej Sprite sheet_0
-    21300002: Andrzej Sprite sheet_1
-    21300004: Andrzej Sprite sheet_2
-    21300006: Andrzej Sprite sheet_3
-  externalObjects: {}
+    21300000: Andrzej Sprite sheet 1_0
+    21300002: Andrzej Sprite sheet 1_1
+    21300004: Andrzej Sprite sheet 1_2
+    21300006: Andrzej Sprite sheet 1_3
+    21300008: Andrzej Sprite sheet 1_4
+    21300010: Andrzej Sprite sheet 1_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -35,7 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -62,39 +63,33 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
   - buildTarget: Android
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Andrzej Sprite sheet_0
+      name: Andrzej Sprite sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,7 +103,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Andrzej Sprite sheet_1
+      name: Andrzej Sprite sheet 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -122,7 +117,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Andrzej Sprite sheet_2
+      name: Andrzej Sprite sheet 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -136,10 +131,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Andrzej Sprite sheet_3
+      name: Andrzej Sprite sheet 1_3
       rect:
         serializedVersion: 2
         x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Andrzej Sprite sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Andrzej Sprite sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 320
         y: 0
         width: 64
         height: 64

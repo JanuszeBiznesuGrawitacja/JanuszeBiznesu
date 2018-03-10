@@ -614,7 +614,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 16f4513e7d1d36049bf46182de1fed0a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5fe242c98d08f5d4eb9e71a2629ca646, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -663,7 +663,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 16f4513e7d1d36049bf46182de1fed0a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 57aa89ffb02e90a4090d3382eef14ac6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -778,6 +778,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102679038041543908}
     m_Position: {x: -398, y: 178, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102434804817418362}
+    m_Position: {x: -363, y: 243, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110183827}
@@ -807,7 +810,30 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 94e8bc44dfc26a54e9a76dd1997c6095, type: 2}
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+--- !u!1102 &1102434804817418362
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AndrzejJump
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 66e9430f4a9df7e4e9425e072a1c833f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
