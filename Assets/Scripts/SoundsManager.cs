@@ -9,6 +9,7 @@ public class SoundsManager : MonoBehaviour {
 	public AudioClip pickPowerUp;
 	public AudioClip clickSound;
 	public AudioClip[] activateGravity;
+	public AudioClip[] takeDamageSounds;
 
 	//Music Tracks
 	public AudioClip intro;
@@ -44,6 +45,10 @@ public class SoundsManager : MonoBehaviour {
 		}
 	}
 
+	public void PlayTakeDamageSound() {
+		PlaySound(takeDamageSounds);
+	}
+
 	public void Stop() {
 		audioSource.Stop();
 		audioSource.clip = null;
@@ -53,9 +58,20 @@ public class SoundsManager : MonoBehaviour {
 		PlaySound(audioClips[Random.Range(0, audioClips.Length)]);
 	}
 
-	private void PlaySound(AudioClip audioClip) {
-		audioSource.PlayOneShot(audioClip);
+	private void PlaySound(AudioClip audioClip, bool isPrioritySound = true) {
+		if ((!locked || isPrioritySound))
+		{
+			locked = true;
+			audioSource.PlayOneShot(audioClip);
+			Invoke("Unlock", 0.075f);
+		}
 	}
+
+	private void Unlock() {
+		locked = false;
+	}
+
+	private bool locked;
 
 	public void SetIntroMusicTrack() {
 		SwitchMusicTrack(intro);
