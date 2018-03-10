@@ -370,5 +370,11 @@ MonoBehaviour:
   brokenPlank:
   - {fileID: 8300000, guid: 83d665adb349f3b429c18e975aa77132, type: 3}
   - {fileID: 8300000, guid: 9523c9d49a4684b49b052adf37dceda0, type: 3}
+  jumpSounds:
+  - {fileID: 8300000, guid: 181c52642490a294b9452992cbd03845, type: 3}
+  - {fileID: 8300000, guid: b5d8005cdbf07274c816e4003be2167d, type: 3}
+  - {fileID: 8300000, guid: f7207fc8e9fc31a43b981998ebc062c6, type: 3}
+  - {fileID: 8300000, guid: 89595cccc70263f4ab3dfb24c1d646fb, type: 3}
+  - {fileID: 8300000, guid: c24a68f6db8b6b1498861421439d0f37, type: 3}
   intro: {fileID: 8300000, guid: b59818ef8c3cc1540bc6bc8f0751b0de, type: 3}
   main: {fileID: 8300000, guid: c6151a5e1ecc9f24cb91eeb80197750c, type: 3}

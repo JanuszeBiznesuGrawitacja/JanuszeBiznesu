@@ -59,11 +59,11 @@ public class SoundsManager : MonoBehaviour {
 		audioSource.clip = null;
 	}
 
-	private void PlaySound(AudioClip[] audioClips) {
+	public void PlaySound(AudioClip[] audioClips) {
 		PlaySound(audioClips[Random.Range(0, audioClips.Length)]);
 	}
 
-	private void PlaySound(AudioClip audioClip, bool isPrioritySound = true) {
+	public void PlaySound(AudioClip audioClip, bool isPrioritySound = true) {
 		if ((!locked || isPrioritySound))
 		{
 			locked = true;
