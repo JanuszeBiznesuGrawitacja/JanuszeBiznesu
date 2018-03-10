@@ -50,6 +50,9 @@ TagManager:
   - name: InteractiveObject
     uniqueID: 2968191529
     locked: 0
+  - name: Text
+    uniqueID: 4072754345
+    locked: 0
   - name: Enemies
     uniqueID: 1944459663
     locked: 0
