@@ -77,15 +77,18 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,6 +110,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &202930466
 GameObject:
@@ -227,6 +232,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 800d02ab160e3594bb668dee5f5e5b7a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &460315220 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1718586135657690, guid: 5cb02396792774240ae7445e8a793fcb,
+    type: 2}
+  m_PrefabInternal: {fileID: 2142901843}
+--- !u!1 &519053991 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1621970140664086, guid: 5cb02396792774240ae7445e8a793fcb,
+    type: 2}
+  m_PrefabInternal: {fileID: 2142901843}
 --- !u!1 &412876242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1231,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705144114609884, guid: 4bd90c700c0e20c4b8e70dc376c9cd0f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bd90c700c0e20c4b8e70dc376c9cd0f, type: 2}
@@ -3324,6 +3343,32 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 234530444}
+    - target: {fileID: 1718586135657690, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621970140664086, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114307733492576050, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: booble
+      value: 
+      objectReference: {fileID: 460315220}
+    - target: {fileID: 114109119839008482, guid: 5cb02396792774240ae7445e8a793fcb,
+        type: 2}
+      propertyPath: booble
+      value: 
+      objectReference: {fileID: 519053991}
+    - target: {fileID: 4197531596923910, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197531596923910, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cb02396792774240ae7445e8a793fcb, type: 2}
   m_IsPrefabParent: 0

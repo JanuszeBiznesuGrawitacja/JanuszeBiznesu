@@ -6,17 +6,15 @@ using UnityEngine.SceneManagement;
 public class StoryManager : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	private void Start() {
 	}
 
-    public void Begin()
-    {
-        SceneManager.LoadSceneAsync("level1");
-    }
+	// Update is called once per frame
+	private void Update() {
+	}
+
+	public void Begin() {
+		SoundsManager.instance.SetMainMusicTrack();
+		SceneManager.LoadSceneAsync("LEVEL");
+	}
 }
