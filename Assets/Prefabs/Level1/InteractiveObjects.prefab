@@ -841,7 +841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c825a803ef465f84095ff54353178938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relativeVelocityToBreak: 0.1
+  relativeVelocityToBreak: 18.5
   ourPipe: {fileID: 1478134085013176}
   pieceBoard: {fileID: 1675027714530784, guid: 330a8a8631f587e4bb96975a9d2ae655, type: 2}
   spawnPoint: {fileID: 4371610917855774}
@@ -857,7 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c825a803ef465f84095ff54353178938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relativeVelocityToBreak: 0.1
+  relativeVelocityToBreak: 18.5
   ourPipe: {fileID: 1060408354329164}
   pieceBoard: {fileID: 1675027714530784, guid: 330a8a8631f587e4bb96975a9d2ae655, type: 2}
   spawnPoint: {fileID: 4802534842939852}

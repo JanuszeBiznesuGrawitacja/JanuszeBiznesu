@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 77aefa902afed934289c51d46d27d758
+timeCreated: 1520661218
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 4Mini
+  fontNames:
+  - 4Mini
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
