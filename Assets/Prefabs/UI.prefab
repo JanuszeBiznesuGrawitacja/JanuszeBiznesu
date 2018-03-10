@@ -54,7 +54,8 @@ GameObject:
   - component: {fileID: 222714487149305580}
   - component: {fileID: 114659010698660420}
   - component: {fileID: 114551175759623024}
-  - component: {fileID: 114431925492287252}
+  - component: {fileID: 114746230651652792}
+  - component: {fileID: 114411848215511046}
   m_Layer: 5
   m_Name: RestartLevel
   m_TagString: Untagged
@@ -159,7 +160,8 @@ GameObject:
   - component: {fileID: 222117623575037902}
   - component: {fileID: 114858350231799360}
   - component: {fileID: 114216451205793986}
-  - component: {fileID: 114880126538281852}
+  - component: {fileID: 114867311311340738}
+  - component: {fileID: 114919157904923274}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -339,7 +341,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114431925492287252
+--- !u!114 &114411848215511046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -347,9 +349,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1301770667278906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95efc9f5201c9a64e9f653281027a7bb, type: 3}
+  m_Script: {fileID: 11500000, guid: a39305f536ab7fc49b0686fff589686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakePower: 15
+  offsetValue: 10
 --- !u!114 &114460044681127840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -483,6 +487,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114746230651652792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1301770667278906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95efc9f5201c9a64e9f653281027a7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114746746140861898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -585,7 +600,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114880126538281852
+--- !u!114 &114867311311340738
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -596,6 +611,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95efc9f5201c9a64e9f653281027a7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114919157904923274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943265615045102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39305f536ab7fc49b0686fff589686b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakePower: 15
+  offsetValue: 10
 --- !u!222 &222028398177789064
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -854,7 +882,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742116584488172}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
