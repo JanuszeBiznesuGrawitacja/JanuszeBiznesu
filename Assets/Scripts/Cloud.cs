@@ -15,7 +15,7 @@ public class Cloud : MonoBehaviour {
 
     void Start()
     {
-        Destroy(gameObject, 25);
+        Destroy(gameObject, 60);
     }
 
     void FixedUpdate()
