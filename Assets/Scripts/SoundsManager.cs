@@ -11,6 +11,9 @@ public class SoundsManager : MonoBehaviour {
 	public AudioClip[] activateGravity;
 	public AudioClip[] takeDamageSounds;
 	public AudioClip[] brokenPlank;
+	public AudioClip[] kickChestSounds;
+	public AudioClip[] dieSounds;
+	public AudioClip[] winSounds;
 
 	//Music Tracks
 	public AudioClip intro;
@@ -53,6 +56,18 @@ public class SoundsManager : MonoBehaviour {
 
 	public void PlayBrokenPlankSound() {
 		PlaySound(brokenPlank);
+	}
+
+	public void PlayKickChestSound() {
+		PlaySound(kickChestSounds);
+	}
+
+	public void PlayDieSound() {
+		PlaySound(dieSounds);
+	}
+
+	public void PlayWonSounds() {
+		PlaySound(winSounds);
 	}
 
 	public void Stop() {
@@ -102,6 +117,7 @@ public class SoundsManager : MonoBehaviour {
 			musicSources[currentPlayingMusicSource].DOFade(0, 0.5f);
 			musicSources[next].clip = track;
 			musicSources[next].loop = track != lector;
+			musicSources[next].volume = track == lector ? 1 : 0.25f;
 			musicSources[next].Play();
 			musicSources[next].DOFade(1, 0.5f);
 			currentPlayingMusicSource = next;
