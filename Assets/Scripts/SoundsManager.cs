@@ -6,6 +6,7 @@ public class SoundsManager : MonoBehaviour {
 
 	private AudioSource audioSource;
 	public AudioSource[] musicSources;
+	public AudioClip pickPowerUp;
 
 	//Music Tracks
 	public AudioClip intro;
@@ -22,6 +23,10 @@ public class SoundsManager : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 		SetIntroMusicTrack();
 		DontDestroyOnLoad(gameObject);
+	}
+
+	public void PlayPickPowerUpSound() {
+		PlaySound(pickPowerUp);
 	}
 
 	public void Stop() {
