@@ -19,9 +19,20 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void SetAsActivePlayer(bool state) {
+		if (!state)
+		{
+			animator.SetTrigger("Idle");
+			animator.SetBool("Ground", true);
+
+			animator.SetFloat("Speed", 0);
+
+			if (platformerCharacter2D.m_Rigidbody2D != null)
+				platformerCharacter2D.m_Rigidbody2D.velocity = new Vector2(0, 0);
+		}
 		userControl.enabled = state;
 		platformerCharacter2D.enabled = state;
-		animator.enabled = state;
+		//animator.enabled = state;
+
 		isActive = state;
 	}
 
