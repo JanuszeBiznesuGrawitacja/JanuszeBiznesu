@@ -15,6 +15,7 @@ public class SoundsManager : MonoBehaviour {
 	//Music Tracks
 	public AudioClip intro;
 
+	public AudioClip lector;
 	public AudioClip main;
 
 	private void Awake() {
@@ -82,6 +83,10 @@ public class SoundsManager : MonoBehaviour {
 		SwitchMusicTrack(intro);
 	}
 
+	public void PlayLectorIntro() {
+		SwitchMusicTrack(lector);
+	}
+
 	public void SetMainMusicTrack() {
 		SwitchMusicTrack(main);
 	}
@@ -96,6 +101,7 @@ public class SoundsManager : MonoBehaviour {
 			int next = (currentPlayingMusicSource + 1) % musicSources.Length;
 			musicSources[currentPlayingMusicSource].DOFade(0, 0.5f);
 			musicSources[next].clip = track;
+			musicSources[next].loop = track != lector;
 			musicSources[next].Play();
 			musicSources[next].DOFade(1, 0.5f);
 			currentPlayingMusicSource = next;

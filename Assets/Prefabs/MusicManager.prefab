@@ -370,11 +370,20 @@ MonoBehaviour:
   brokenPlank:
   - {fileID: 8300000, guid: 83d665adb349f3b429c18e975aa77132, type: 3}
   - {fileID: 8300000, guid: 9523c9d49a4684b49b052adf37dceda0, type: 3}
-  jumpSounds:
-  - {fileID: 8300000, guid: 181c52642490a294b9452992cbd03845, type: 3}
-  - {fileID: 8300000, guid: b5d8005cdbf07274c816e4003be2167d, type: 3}
-  - {fileID: 8300000, guid: f7207fc8e9fc31a43b981998ebc062c6, type: 3}
-  - {fileID: 8300000, guid: 89595cccc70263f4ab3dfb24c1d646fb, type: 3}
-  - {fileID: 8300000, guid: c24a68f6db8b6b1498861421439d0f37, type: 3}
+  kickChestSounds:
+  - {fileID: 8300000, guid: 1e1dd0fe4748f884ca595b0ad1954c43, type: 3}
+  - {fileID: 8300000, guid: 86f368516063951489d44897e1ae5330, type: 3}
+  - {fileID: 8300000, guid: e91077290feabb74e84fd1d3a9667e02, type: 3}
+  dieSounds:
+  - {fileID: 8300000, guid: d73029d0e49c6b343b5e3b2ae21ad568, type: 3}
+  - {fileID: 8300000, guid: 92296b3b4f1bee34393bb1613083da54, type: 3}
+  - {fileID: 8300000, guid: 5869c71fef8d22946ba90f0973ed9591, type: 3}
+  - {fileID: 8300000, guid: 84596f564db00c14aa78cf4e8b3109fc, type: 3}
+  - {fileID: 8300000, guid: 5112583ccfa2c08429712fc4d569c6a0, type: 3}
+  - {fileID: 8300000, guid: 8d07920641fae544898766617116c4dd, type: 3}
+  winSounds:
+  - {fileID: 8300000, guid: aac950b6d1c39b144afd41de9958a22a, type: 3}
+  - {fileID: 8300000, guid: 14e0cf6509c9ffa41ad961e315576460, type: 3}
   intro: {fileID: 8300000, guid: b59818ef8c3cc1540bc6bc8f0751b0de, type: 3}
+  lector: {fileID: 8300000, guid: 0f6f8af4f81b54944ab1757b75d5babb, type: 3}
   main: {fileID: 8300000, guid: c6151a5e1ecc9f24cb91eeb80197750c, type: 3}
