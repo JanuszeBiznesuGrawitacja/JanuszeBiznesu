@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1566877483761190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.08, y: 0.49683172, z: 0}
+  m_LocalPosition: {x: 6.02, y: -11.06, z: 0}
   m_LocalScale: {x: 1.71, y: 1.71, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,10 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175b6818699892442bcb691fb28d7253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  maxDistance: 0
-  minDistance: 56.42
-  catchPlayer: 0
+  speed: 3
+  walkingRange: 4
+  sightRange: 10
 --- !u!212 &212540335411101240
 SpriteRenderer:
   m_ObjectHideFlags: 1

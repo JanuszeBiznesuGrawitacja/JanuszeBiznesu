@@ -1,62 +1,83 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
+	private Rigidbody2D rb2d;
+	public float speed;
+	public float walkingRange;
+	public float sightRange;
+	private float direction = 1;
+	private Vector3 startPosition;
+	private Transform target;
 
-    Rigidbody2D rb2d;
-    public float speed;
-    public float maxDistance, minDistance;
-    [SerializeField] bool catchPlayer = false;
-    float direction;
+	public float Direction {
+		get
+		{
+			return direction;
+		}
 
-    void Awake()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
-    }
+		set
+		{
+			if (value != direction)
+			{
+				direction = value;
+				transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+			}
+		}
+	}
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        catchPlayer = false;
-        var health = collision.collider.GetComponentInParent<Health>();
-        if (health != null)
-        {
-            health.LoseHealth(100);
-        }
-    }
+	private void Awake() {
+		rb2d = GetComponent<Rigidbody2D>();
+		startPosition = transform.position;
+	}
 
-    void FixedUpdate()
-    {
-        if (!catchPlayer)
-        {
-            rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
-            if (transform.position.x > maxDistance)
-            {
-                speed = -5;
-                transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-            }
-            if (transform.position.x < minDistance)
-            {
-                speed = 5;
-                transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-            }
-        }
-        else
-        {
-            speed *= direction;
-            rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
-        }
-    }
+	private void OnCollisionEnter2D(Collision2D collision) {
+		var health = collision.collider.GetComponentInParent<Health>();
+		if (health != null)
+		{
+			health.LoseHealth(100);
+		}
+		else if (collision.gameObject.CompareTag("Obstacle"))
+		{
+			Direction *= -1;
+		}
+	}
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            catchPlayer = true;
-            direction = Mathf.Sign(collision.transform.position.x - transform.position.x);
-        }
+	private void OnCollisionStay2D(Collision2D collision) {
+		var health = collision.collider.GetComponentInParent<Health>();
+		if (health != null)
+		{
+			health.LoseHealth(100);
+		}
+	}
 
-    }
+	private void Update() {
+		if (!target)
+		{
+			if (transform.position.x > startPosition.x + walkingRange)
+			{
+				Direction = -1;
+			}
+			else if (transform.position.x < startPosition.x - walkingRange)
+			{
+				Direction = 1;
+			}
+		}
+		else
+		{
+			var distance = target.position.x - transform.position.x;
+			Direction = Mathf.Sign(distance);
+			if (Mathf.Abs(distance) > sightRange)
+			{
+				target = null;
+			}
+		}
+		rb2d.velocity = new Vector2(speed * Direction, rb2d.velocity.y);
+	}
 
-
+	private void OnTriggerEnter2D(Collider2D collision) {
+		if (collision.tag == "Player")
+		{
+			target = collision.transform;
+		}
+	}
 }
