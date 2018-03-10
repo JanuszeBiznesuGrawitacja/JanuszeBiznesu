@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using DG.Tweening;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     private Vector3 startPosition;
     private Transform target;
     public float relativeVelocityToKill;
+    Animator anim;
 
     public float Direction
     {
@@ -31,15 +33,16 @@ public class EnemyManager : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         startPosition = transform.position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.relativeVelocity.magnitude >= relativeVelocityToKill)
+        if (collision.relativeVelocity.magnitude >= relativeVelocityToKill && collision.collider.tag=="Player")
         {
-            Destroy(gameObject);
+            transform.DOScaleY(0, 0.5f).OnComplete(()=>Destroy(gameObject));
         }
         else
         {
